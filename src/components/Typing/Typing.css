@@ -1,34 +1,62 @@
 .typing-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20vh;
-    background-color: #f9f9f9;
-  }
-  
-  .typing-text {
-    font-size: 2rem;
-    font-family: monospace;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  background-color: #f9f9f9;
+  padding: 10px;
+  text-align: center;
+}
+
+.typing-text {
+  font-size: 2rem;
+  font-family: monospace;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black;
+  width: 0;
+  animation: typing 1s steps(var(--text-length)) forwards, blink 0.7s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
     width: 0;
-    animation: typing 1s steps(var(--text-length)) forwards, blink 0.7s step-end infinite;
   }
-  
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: calc(var(--text-length) * 1ch);
-    }
+  to {
+    width: calc(var(--text-length) * 1ch);
   }
-  
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
-  
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .typing-text {
+    font-size: 1.5rem;
+    border-right: 2px solid black;
+  }
+
+  .typing-container {
+    height: 15vh;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  .typing-text {
+    font-size: 1.2rem;
+    border-right: 2px solid black;
+  }
+
+  .typing-container {
+    height: auto;
+    padding: 20px 10px;
+  }
+}

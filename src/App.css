@@ -1,3 +1,18 @@
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Your other styles follow here */
+
 .App {
   text-align: center;
 }

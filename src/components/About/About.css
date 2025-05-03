@@ -1,68 +1,115 @@
-
 .social-icons {
     margin-top: 20px;
     display: flex;
     gap: 15px;
-  }
-  
-  .social-icons a {
+    justify-content: center; /* Centering social icons */
+}
+
+.social-icons a {
     font-size: 1.5rem;
     color: #333;
     transition: color 0.3s;
-  }
-  
-  .social-icons a:hover {
+}
+
+.social-icons a:hover {
     color: #007bff; /* Change to brand color if you want */
-  }
-  .hero-section {
+}
+
+.hero-section {
     padding: 60px 20px;
     background-color: #f9f9f9;
-  }
-  
-  .hero-content {
+}
+
+.hero-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1100px;
+
+    width: 100%;
+    max-width: 100%; /* Add this */
+    box-sizing: border-box;
+
     margin: 0 auto;
     flex-wrap: wrap;
-  }
-  
-  .text-content {
+    padding: 0 20px; /* Added padding for smaller screen sizes */
+}
+
+.text-content {
     flex: 1;
     min-width: 280px;
     padding: 20px;
-  }
-  
-  .text-content p {
+}
+
+.text-content p {
     font-size: 1.2rem;
     color: #333;
     margin-top: 15px;
-  }
-  
-  .image-content {
+}
+
+.image-content {
     flex: 1;
-    min-width: 280px;
+   
+    width: 50%;
+   
     text-align: center;
     margin-top: 30px;
     padding: 20px;
-  }
-  
-  .image-content img {
+    max-width: 100%;
+
+
+}
+
+.image-content img {
     max-width: 100%;
     height: auto;
     border-radius: 30px;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+    object-fit: cover; /* Ensures image maintains aspect ratio */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .hero-content {
-      flex-direction: column;
-      text-align: center;
+        flex-direction: column;
+        text-align: center;
     }
-  
+
+    .text-content {
+        padding: 10px;
+        min-width: 100%; /* Ensures text content takes full width */
+    }
+
     .text-content p {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  }
-  
+
+    .image-content {
+        min-width: 100%;
+        margin-top: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 40px 10px; /* Reducing padding for very small screens */
+    }
+
+    .text-content p {
+        font-size: 0.9rem; /* Smaller text size for very small screens */
+    }
+
+    .image-content img {
+        border-radius: 20px; /* Adjust image border radius on smaller screens */
+    }
+
+    .hero-content {
+        padding: 10px 0; /* Adjust padding for better fit */
+    }
+}

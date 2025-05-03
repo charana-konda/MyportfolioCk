@@ -18,7 +18,6 @@ const App = () => {
         <Route path="/experience" element={<Experience />} />
         <Route path="/achievements" element={<Achievements />} />
         <Route path="/aboutme" element={<AboutMe />} />
-       
         
       
       </Routes>
