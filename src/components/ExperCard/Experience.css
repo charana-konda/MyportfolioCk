@@ -1,0 +1,72 @@
+
+.exp-card {
+    background-color: #fff;
+    border-left: 6px solid #ff80ab;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    max-width: 60%;
+    margin: 20px auto;
+    transition: transform 0.3s ease;
+    
+  }
+  
+  .exp-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .exp-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .exp-role {
+    font-size: 1.4rem;
+    color: #d63384;
+    margin: 0;
+  }
+  
+  .exp-company {
+    font-size: 1.1rem;
+    color: #6c757d;
+  }
+  
+  .exp-duration {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #777;
+    margin: 10px 0;
+  }
+  
+  .icon {
+    color: #ff69b4;
+  }
+  
+  .exp-description {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .exp-tech {
+    font-size: 0.95rem;
+    color: #444;
+  }
+  .exp-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .exp-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  
