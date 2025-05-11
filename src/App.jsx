@@ -6,9 +6,15 @@ import Projects from '.././src/pages/Projects';
 import Experience from '.././src/pages/Experience';
 import Achievements from '.././src/pages/Achievments';
 import AboutMe from './pages/AboutMe/AboutMe';
+import { useEffect } from "react";
+
 
 
 const App = () => {
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", "light");
+  }, []);
+  
   return (
     <Router>
       <Navbar />
